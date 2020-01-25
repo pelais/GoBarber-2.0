@@ -15,7 +15,7 @@ export default function Header() {
       <Content>
         <nav>
           <img src={logo} alt="GoBarber" />
-          <Link to="/dashboard">DASHBOARD</Link>
+          <Link to="/dashboard">MENU</Link>
         </nav>
         <aside>
           <Notifications />
@@ -23,7 +23,7 @@ export default function Header() {
           <Profile>
             <div>
               <strong>{profile.name}</strong>
-              <Link to="profile">My profile</Link>
+              <Link to="profile">Perfil</Link>
             </div>
             <img
               src={

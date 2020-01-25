@@ -17,7 +17,7 @@ export function* signIn({ payload }) {
     const { token, user } = response.data;
 
     if (user.provider) {
-      Alert.alert('Login failure', 'The user can not be a provider');
+      Alert.alert('Falha de Login', 'The user can not be a provider');
       return;
     }
 
@@ -25,7 +25,7 @@ export function* signIn({ payload }) {
 
     yield put(signInSuccess(token, user));
   } catch (err) {
-    Alert.alert('Authentication failure', 'Please verify your data');
+    Alert.alert('Autentificação inválida', 'Por favor, verifique seus dados');
 
     yield put(signFailure());
   }
@@ -41,7 +41,7 @@ export function* signUp({ payload }) {
       password,
     });
   } catch (err) {
-    Alert.alert('Register failure', 'Please verify your data');
+    Alert.alert('Registro inválido', 'Por favor, verifique seus dados');
 
     put(signFailure());
   }

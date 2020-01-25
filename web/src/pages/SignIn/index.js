@@ -10,9 +10,9 @@ import logo from '~/assets/logo.svg';
 
 const schema = Yup.object().shape({
   email: Yup.string()
-    .email('Invalid email')
-    .required('Email is required'),
-  password: Yup.string().required('Password is required'),
+    .email('Conta de e-mail inválida')
+    .required('Necessário informar o e-mail'),
+  password: Yup.string().required('Necessário informar a senha'),
 });
 
 export default function SignIn() {
@@ -28,11 +28,11 @@ export default function SignIn() {
       <img src={logo} alt="GoBarber" />
 
       <Form schema={schema} onSubmit={handleSubmit}>
-        <Input name="email" type="email" placeholder="Email" />
-        <Input name="password" type="password" placeholder="Password" />
+        <Input name="email" type="email" placeholder="E-mail" />
+        <Input name="password" type="password" placeholder="Senha" />
 
-        <button type="submit">{loading ? 'Loading...' : 'Access'}</button>
-        <Link to="/register">Create new account</Link>
+        <button type="submit">{loading ? 'Carregando...' : 'Entrar'}</button>
+        <Link to="/register">Criar nova conta</Link>
       </Form>
     </>
   );

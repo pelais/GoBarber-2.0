@@ -28,7 +28,7 @@ export function* signIn({ payload }) {
 
     history.push('/dashboard');
   } catch (err) {
-    toast.error('Authentication failed. Please verify your data');
+    toast.error('Autentificação inválida. Por favor, verifique seus dados');
     yield put(signFailure());
   }
 }
@@ -46,7 +46,7 @@ export function* signUp({ payload }) {
 
     history.push('/');
   } catch (err) {
-    toast.error('Registration failed. Please verify your data');
+    toast.error('Falha de registro. Por favor, verifique seus dados');
 
     put(signFailure());
   }
