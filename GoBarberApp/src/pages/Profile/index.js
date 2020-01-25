@@ -64,7 +64,7 @@ export default function Profile() {
           <FormInput
             icon="person-outline"
             autoCorrect={false}
-            placeholder="Complete name"
+            placeholder="Nome completo"
             returnKeyType="next"
             onSubmitEditing={() => emailRef.current.focus()}
             blurOnSubmit={false}
@@ -76,7 +76,7 @@ export default function Profile() {
             keyboardType="email-address"
             autoCorrect={false}
             autoCapitalize="none"
-            placeholder="Email"
+            placeholder="E-mail"
             ref={emailRef}
             returnKeyType="next"
             onSubmitEditing={() => oldPasswordRef.current.focus()}
@@ -90,7 +90,7 @@ export default function Profile() {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Old password"
+            placeholder="Senha antiga"
             ref={oldPasswordRef}
             returnKeyType="next"
             onSubmitEditing={() => passwordRef.current.focus()}
@@ -101,7 +101,7 @@ export default function Profile() {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Password"
+            placeholder="Senha"
             ref={passwordRef}
             returnKeyType="next"
             onSubmitEditing={() => confirmPasswordRef.current.focus()}
@@ -112,7 +112,7 @@ export default function Profile() {
           <FormInput
             icon="lock-outline"
             secureTextEntry
-            placeholder="Confirm password"
+            placeholder="Confirmação senha"
             ref={confirmPasswordRef}
             returnKeyType="send"
             onSubmitEditing={handleSubmit}
@@ -133,7 +133,7 @@ function ProfileTabBarIcon({ tintColor }) {
 }
 
 Profile.navigationOptions = {
-  tabBarLabel: 'My Profile',
+  tabBarLabel: 'Perfil',
   tabBarIcon: ProfileTabBarIcon,
 };
 
